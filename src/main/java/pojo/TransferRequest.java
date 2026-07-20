@@ -1,13 +1,13 @@
 package pojo;
 
 public class TransferRequest {
-    public String fromAccountId;
-    public String toAccountId;
-    public double amount;
+    public int fromAccountNumber;
+    public int toAccountNumber;
+    public double transferAmount;
 
-    public TransferRequest(String from, String to, double amount) {
-        this.fromAccountId = from;
-        this.toAccountId = to;
-        this.amount = amount;
+    public TransferRequest(int from, int to, double amount) {
+        this.fromAccountNumber = from;
+        this.toAccountNumber = to;
+        this.transferAmount = amount;
     }
 }

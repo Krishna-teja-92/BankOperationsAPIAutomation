@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <build>
@@ -21,6 +21,15 @@
                 <version>3.2.5</version> <!-- Lock a stable version -->
                 <configuration>
                     <!-- Custom configurations go here -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
         </plugins>
@@ -64,9 +73,9 @@
             <version>2.5.3</version>
         </dependency>
         <dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>5.1.2</version>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.10.1</version>
         </dependency>
     </dependencies>
 </project>
