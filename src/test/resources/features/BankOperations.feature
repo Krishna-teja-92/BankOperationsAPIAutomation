@@ -1,10 +1,10 @@
 Feature: Bank API Operations
 
-@first
+  @createCustomer
   Scenario: Create a customer and validate get customer details
   Given I have valid customer details
   When I submit a POST request to "/customers/add"
-  Then the response status code should be 200
+  Then the response status code should be 201
   And validate the customer details with endpoint "/customers" and customerNumber
   And the response code should be 200 and response customerNumber should match the request
 
@@ -22,7 +22,7 @@ Feature: Bank API Operations
     |"CURRENT"|5000.00|
     |"BUSINESS"|10000.00|
 
-    @transfer
+    @transferFunds
     Scenario Outline: Transfer funds between accounts and validate the final balance in both accounts
       Given <fromAccountNum> and <toAccountNum> details
       And fetch the initial account balances for the given accounts
@@ -32,11 +32,11 @@ Feature: Bank API Operations
 
       Examples:
       |fromAccountNum|toAccountNum|transferAmount|customerNumber|
-      |98174         |59105       |100.00          |81545       |
-      |59105         |98174       |200.00          |81545       |
+      |98174         |59105       |100.00          |14603       |
+      |59105         |98174       |200.00          |14603       |
 
-
-    Scenario Outline:  Get all transactions of the account and print total credit and debit amounts
+    @transactionDetails
+    Scenario Outline:  Get all transactions of the account and print net amount with credit or debit
       Given <accountNumber> for fetching transactions
       When submit a get request to endpoint "/accounts/transactions"
       Then the response status code should be 200
@@ -46,6 +46,43 @@ Feature: Bank API Operations
       |accountNumber|
       |98174        |
       |59105        |
+
+    @getAllCustomers
+    Scenario: Get list of all customers in the bank
+      Given Get request is submitted to endpoint "/customers/all" for fetching all customers
+      Then the response status code should be 200
+      And print the number of customers and list of customer numbers
+
+    @updateCustomer
+    Scenario Outline: Update the customer details
+     Given <customerNumber> for which update has to be done
+     When submit put request to endpoint "/customers"
+     Then the response status code should be 200
+     And validate the response message
+
+      Examples:
+      |customerNumber|
+      |86969         |
+
+    @deleteCustomer
+    Scenario Outline: Delete the customer details
+      Given <customerNumber> for which deletion has to be done
+      When submit delete request to endpoint "/customers"
+      Then the response status code should be 200
+      And validate the response message for deletion
+
+      Examples:
+      |customerNumber|
+      |1234          |
+
+
+
+
+
+
+
+
+
 
 
 

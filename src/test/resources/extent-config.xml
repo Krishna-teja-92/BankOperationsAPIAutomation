@@ -1,0 +1,14 @@
+<configuration>
+    <theme>STANDARD</theme>
+    <encoding>utf-8</encoding>
+    <protocol>HTTPS</protocol>
+
+    <!-- Title that appears in the browser tab -->
+    <documentTitle>Banking API Test Execution Report</documentTitle>
+
+    <!-- Name that appears in the top-left of the report -->
+    <reportName>API Automation Suite - Customer &amp; Account Operations</reportName>
+
+    <!-- CSS for better readability -->
+    <saveGeneratedStatements>true</saveGeneratedStatements>
+</configuration>

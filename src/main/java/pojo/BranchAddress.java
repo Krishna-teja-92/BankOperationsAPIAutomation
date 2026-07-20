@@ -11,4 +11,6 @@ public class BranchAddress {
         this.zip = zip;
         this.country = country;
     }
+
+
 }
