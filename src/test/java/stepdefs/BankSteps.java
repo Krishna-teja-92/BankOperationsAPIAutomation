@@ -291,13 +291,6 @@ else
 
     }
 
-    @And("validate the response message")
-    public void validateTheResponseMessage() {
-        scenario.log("<span style='color:orange'>Validation of Response message for customer update</span>");
-        assertEquals(response.asString(),"Success: Customer updated.");
-
-    }
-
     @Given("{long} for which deletion has to be done")
     public void customernumberForWhichDeletionHasToBeDone(long custNum) {
         deleteCNum=custNum;
@@ -311,10 +304,24 @@ else
 
     }
 
-    @And("validate the response message for deletion")
-    public void validateTheResponseMessageForDeletion() {
-        scenario.log("<span style='color:orange'>Validation of Response message for customer deletion</span>");
-        assertEquals(response.asString(),"Success: Customer deleted.");
+    @And("validate the response message {string}")
+    public void validateTheResponseMessageResponseMessage(String message) {
+        scenario.log("<span style='color:orange'>Validation of Response message</span>");
+        String type=response.getHeader("content-type");
+        if(type.contains("json"))
+            assertEquals(response.jsonPath().getString("message"),message);
+        else
+            assertEquals(response.asString(),message);
+    }
+
+    @And("Initiate funds transfer for {double} with {long} to endpoint {string}")
+    public void initiateFundsTransferForTransferAmountWithCustomerNumberToEndpoint(double amount,long custNum,String endpoint) {
+        transferAmount=amount;
+        transfer=new TransferRequest(fAccNum,tAccNum,amount);
+        scenario.log("<span style='color:orange'> Transfer request payload is created.</span>");
+        String payload=mapper.writeValueAsString(transfer);
+        scenario.log("<b>Request Payload:</b><br><pre>" + payload + "</pre>");
+        response=given().spec(BaseAPI.getRequestSpec()).pathParam("customerNumber",custNum).body(transfer).log().all().put(endpoint+"/{customerNumber}");
     }
 }
 

@@ -28,12 +28,14 @@ Feature: Bank API Operations
       And fetch the initial account balances for the given accounts
       And Initiate funds transfer request for <transferAmount> with <customerNumber> to endpoint "/accounts/transfer"
       Then the response status code should be 200
+      And validate the response message <responseMessage>
       And validate the final balances in both accounts
 
+
       Examples:
-      |fromAccountNum|toAccountNum|transferAmount|customerNumber|
-      |98174         |59105       |100.00          |14603       |
-      |59105         |98174       |200.00          |14603       |
+      |fromAccountNum|toAccountNum|transferAmount|customerNumber|responseMessage|
+      |98174         |59105       |100.00          |14603       |"Success: Amount transferred for Customer Number 14603"|
+      |59105         |98174       |200.00          |14603       |"Success: Amount transferred for Customer Number 14603"|
 
     @transactionDetails
     Scenario Outline:  Get all transactions of the account and print net amount with credit or debit
@@ -58,22 +60,22 @@ Feature: Bank API Operations
      Given <customerNumber> for which update has to be done
      When submit put request to endpoint "/customers"
      Then the response status code should be 200
-     And validate the response message
+     And validate the response message <responseMessage>
 
       Examples:
-      |customerNumber|
-      |86969         |
+      |customerNumber|responseMessage|
+      |86969         |"Success: Customer updated."|
 
     @deleteCustomer
     Scenario Outline: Delete the customer details
       Given <customerNumber> for which deletion has to be done
       When submit delete request to endpoint "/customers"
       Then the response status code should be 200
-      And validate the response message for deletion
+      And validate the response message <responseMessage>
 
       Examples:
-      |customerNumber|
-      |1234          |
+      |customerNumber|responseMessage|
+      |6320          |"Success: Customer deleted."|
 
 
 
