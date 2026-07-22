@@ -75,7 +75,7 @@ Feature: Bank API Operations
 
       Examples:
       |customerNumber|responseMessage|
-      |6320          |"Success: Customer deleted."|
+      |0             |"Success: Customer deleted."|
 
 
 
