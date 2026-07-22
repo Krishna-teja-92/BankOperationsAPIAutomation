@@ -1,0 +1,197 @@
+1)POST /customers/add - Add a customer ( Design change :- Endpoint should not have verb add , the POST method says it all the we are creating resource) 
+
+Negative test scenarios:-
+
+a)Customer Number is mandatory to add a customer, This cannot be Null  ,Customer Number is used to uniquely identify the customer.
+
+b)Customer Number cannot be String.
+
+c)Adding a customer ,with existing customer number .  System should not allow to add customer number which is already existing 
+
+Defect : Customer Number is accepting Negative number --> which is not correct, Customer Number cannot be negative. 
+
+Positive scenario : Adding customer with all details and calling get customer details to validate the customer is added. 
+Assumption : The POST request is giving response code as 201 (which indicated new resource creation),but swagger is showing 200 . Considered validation with response code as 201.
+
+2)GET /customers/{customerNumber} -- Get customer details 
+
+Defect:- When get customer details API is called with Invalid customer Number , API response should return "Customer Not found" , But the response status code is 200.
+
+Positive scenario:- Get customer details is validated as part of add customer scenario.
+
+3)PUT /customers/{customerNumber} -- update a customer
+
+Negative test scenario: 
+a)Updating a non existing customer should not be allowed and proper message and response should be displayed.
+
+Defect :- Customer number cannot be updated ,but all other information related to customer can be updated. But the system is giving success response code "200" when the customer Number is also changed in the update request. Though the customer Number is not changed in the backend, we should have proper response message displayed for this scenario.
+
+Positive scenario:- Update all customer details for existing customer and validate the response code and response message.
+
+4)DELETE /customers/{customerNumber} -- Delete the customer and related accounts 
+Negative test scenario: 
+1)Deleting a non existing customer should not be allowed and proper message and response should be displayed.
+
+Defect :- Delete customer request should delete all the accounts associated with the customer. But the system is not deleting the accounts associated with the customer and no endpoint is available to check the accounts associated with the customer Number.
+
+There is no relation between account and customer. Account details does not have customer Number associated with it.
+
+Positive scenario:- Delete existing customer and validate the response code and response message.
+
+GET /customers/all -- Find all customers
+
+Positive scenario :- Fetching all customers in the Bank , Priting no. of customers and their customer numbers. [Validation can be added against these 2 parameters]
+
+Accounts and Transactions REST endpoints 
+
+POST /accounts/add/{customerNumber} -- Add a new account [Add account request payload does not have customer Number, Hence there is no linkage of account and customer , Also no Endpoint is available for fetch all accounts for a given customer]
+
+Negative test scenarios:-
+
+a)Account Number is mandatory to add a account, This cannot be Null  ,Account Number is used to uniquely identify the account.
+
+b)Account Number cannot be String.
+
+Adding an account ,with existing account number .  System should not allow to add customer number which is already existing.
+
+c)Adding account for invalid customer number should not be allowed , Validating the response code and message for this scenario.
+
+Defect : Account Number is accepting Negative number --> which is not correct, Account Number cannot be negative.
+
+Positive scenario :- Create an account for a customer and validate the account details after account creation.
+Defect :- Add account is not giving proper message on success like "Account created successfully".
+
+GET /accounts/{accountNumber} - Get account details 
+
+Negative test scenario:-
+
+a)Request get account details for an non existing account and validate the response code and response message. Non exising account details fetch should return proper response code and response message.
+
+Positive scenario :- Get account details is validated as part of add account scenario. 
+Failure :- Get Account details is not displaying a message "Account found successfully".
+
+Defect :- Get account details is not giving success response code 200 and validation message "Account found successfully", instead it is returning 302 error response with account details json.
+
+PUT /accounts/transfer/{customerNumber} - Transfer Funds between accounts
+
+Critical scenario in terms of operations, The major business functionality in banking is Funds transfer.
+
+Design gap : 
+customer Number is not needed for transferring funds between 2 accounts.
+System is throwing the error response when invalid customer number is given in Funds transfer request. 
+
+Defects:- 
+1)Funds transfer request is successful though the from account number and to account number does not belong to given customer number.
+2)Initiating a Fund transfer request with same from and to account number is giving success response code ,and the transaction details list is updated with the same.
+3)Initiating a Fund transfer request with negative transfer amount is accepted by the system and the details are added to the transactions list .
+
+Negative test scenario :-
+a)Initiate funds transfer request with invalid from account number and validate the response code and message. [Funds transfer should not be successful]
+b)Initiate funds transfer request with invalid to account number and validate the response code and message.[Funds transfer should not be successful]
+c)Initiate funds transfer request with transfer amount more than account balance. System should respond with proper message and response code.[Funds transfer should not be successful]
+
+Positive scenario :-
+Funds transfer request API is triggered with all the valid inputs required and verified the initial and final balances before and after transfer for both accounts.
+
+GET /accounts/transactions/{accountNumber} --> Get all transactions 
+
+Defects :- 
+1)Transaction date time in the response is not in the correct format , Date is not displayed only time is displayed in HH:MM:SS format.
+2)When transactions are requested for non existing/invalid account number , then the system should give proper response code and proper validation message, instead it is returning empty array [].
+
+Positive scenario :-
+Get all transactions for an account and display the total transactions count and Net Credit or debit amount from the total transactions.[ Validation can be added against these parameters]
+
+accno:-
+customer no.752760985
+738626237
+577318834
+125592570
+
+Functional Analysis of Bank API's:-
+
+Creating a customer --> Onboarding the customer to bank system with all required details
+
+Updating the customer details --> Changing any fields such as emailID,phone number etc for the customer once onboarded.
+
+Get customer details --> Fetching the details of onboarded customer. [ Not giving account information of the customer]
+
+Delete customer --> Exit of customer from the bank 
+
+Find all customers --> To fetch the details of all customers in the bank.
+
+Account is needed for any bank transaction to take place. Each customer will have one or more account linked to it.
+
+Add an account --> Account can be added under customer with all account related details. ( Update account information , Close account API's are not available , Fetch accounts linked to customer API is not available) [There is no association of customer inside the account request json]
+
+Get account details --> To fetch account details.
+
+Transfer Funds request --> Once we have accounts , Transactions can be performed such as fund transfer from one account to other.[ No customer is needed here for Funds transfer]
+
+Get transaction details --> Once transactions are initiated from or to an account, we can get the details of those transactions.
+
+Test approach:- 
+
+1)Validating the API's manually based on above functional analysis and relation ships between available API's to ensure the result.
+
+2)Identifying the design gaps,defects,observations and excluding those areas in automation solution till the fix/clarification is available.
+
+3)Framing the positive scenario workflow based on the above functional analysis and designing the automation scenarios for the positive workflow [ Happy Path flow]
+
+4)Analysing the possible negative scenarios in the BANK API system and designing automation scenarios for those.
+
+Automation solution :- [Maven project structure with Cucumber BDD and TestNG for assertions]
+
+I have used JAVA 17 with Rest Assured library for API automation. Maven is used as build tool for including the project dependencies. TestNG Assertions are used for Validation of tests. Extent reports are used for reporting purpose.
+
+Cucumber BDD is used as project framework in which scenarios are written in the business readable format and the code is aligned to the cucumber steps. Any business user reading the scneario will get to know the action or functionality being covered. Hence i have used Cucumber BDD framework.
+
+All the request and response payloads are maintained in POJO classes . Extent reports are used for reporting purpose. Cucumber BDD framework consists of Feature files and stepdefinitions defining the code for feature file steps.
+Feature file will explain the feature in test and multiple scenarios possible for the feature are included as scenarios in the feature file.
+
+The project consists of 2 feature files 
+1)BankOperations.feature --> Positive scenario workflow
+2)NegativeTestScenarios.feature --> Negative test scenarios
+
+Test Runner class is created which links the feature file and stepdefinition files and controls the test execution  --> Feature to be executed can be added here, or Tags can be included , reporting configuration can be added.
+
+Extent reports needs 2 files Extent.properties and extent-config.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

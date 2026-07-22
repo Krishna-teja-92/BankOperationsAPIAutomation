@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<!-- saved from url=(0141)http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&_ij_reload=RELOAD_ON_SAVE# -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Banking API Test Execution Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="./Banking API Test Execution Report_NegativeTests_files/spark-style.css" rel="stylesheet">
+<link href="./Banking API Test Execution Report_NegativeTests_files/font-awesome.min.css" rel="stylesheet">
+<script src="./Banking API Test Execution Report_NegativeTests_files/jsontree.js.download"></script>
+<style type="text/css"></style><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#">
+<div class="logo" style="background-image: url(&#39;https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png&#39;)"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#"><span class="badge badge-primary">API Automation Suite - Customer &amp; Account Operations</span></a>
+</li>
+<li class="m-r-10">
+<a href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#"><span class="badge badge-primary">Jul 22, 2026 12:40:42 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView(&#39;test-view&#39;)">
+<a id="nav-test" class="dropdown-toggle" href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView(&#39;dashboard-view&#39;)">
+<a id="nav-dashboard" class="dropdown-toggle" href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable ps-container ps-theme-default" data-ps-id="d4c94e79-9391-859a-299c-7cb64f6ecf4d">
+      <ul class="test-list-item">
+        <li class="test-item active" status="pass" test-id="1" author="" tag="" device="">
+          <div class="test-detail">
+            <p class="name">Negative scenario testing for Bank API's</p>
+            <p class="text-sm">
+              <span>12:40:42 pm</span> / <span>00:00:11:549</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Negative scenario testing for Bank API's</h5>
+<span class="badge badge-success">07.22.2026 12:40:42 pm</span>
+<span class="badge badge-danger">07.22.2026 12:40:54 pm</span>
+<span class="badge badge-default">00:00:11:549</span>
+· <span class="uri-anchor badge badge-default">#test-id=1</span>
+<span class="badge badge-default pointer float-right ml-1 et"><i class="fa fa-chevron-down"></i></span>
+<span class="badge badge-default pointer float-right ct"><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with invalid inputs and validate the response code</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "Null" to add customer API</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/customers/add"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "ABC" to add customer API</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":ABC,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/customers/add"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Call Add account API with invalid inputs and validate the response code</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Call Add account API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "Null" to add Account API</span>
+      <div><b>Request Payload:</b><br><pre>  "accountNumber":,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 172522328</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>Call Add account API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "ABC" to add Account API</span>
+      <div><b>Request Payload:</b><br><pre>  "accountNumber":ABC,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 172522328</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with existing customer Number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with existing customer Number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing 75931</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":75931,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/customers/add"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer with id: 75931 already exist" for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 75931 already exist"}</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 75931 already exist"}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="36"><span class="badge log pass-bg mr-2">Pass</span>Call Add Account API with existing Account Number and invalid customer Number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="37"><span class="badge log pass-bg mr-2">Pass</span>Call Add Account API with existing Account Number and invalid customer Number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing account 98174</span>
+      <div><b>Request Payload:</b><br><pre> {
+"accountNumber":98174,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 75931</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Account with id: 98174 already exist!" for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Account with id: 98174 already exist!"}</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Account with id: 98174 already exist!"}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Call Add Account API with existing Account Number and invalid customer Number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing account 98174</span>
+      <div><b>Request Payload:</b><br><pre> {
+"accountNumber":98174,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 719181</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer with id: 719181 does not exist!" for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 719181 does not exist!"}</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 719181 does not exist!"}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="51"><span class="badge log pass-bg mr-2">Pass</span>Call get account details with Invalid account number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>Call get account details with Invalid account number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing account 981741</span>
+      <div><b>Request Payload:</b><br><pre> {
+"accountNumber":981741,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When a get request is submitted to endpoint "/accounts"</span>
+      <div><span style="color:orange">Get account details request submitted</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Account Number 981741 not found.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Account Number 981741 not found." for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Account Number 981741 not found.</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Account Number 981741 not found.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="59"><span class="badge log pass-bg mr-2">Pass</span>Call update customer with non existent customer number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="60"><span class="badge log pass-bg mr-2">Pass</span>Call update customer with non existent customer number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given update request payload is created</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":1234,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When submit a put request to endpoint "/customers" with 719181</span>
+      <div><span style="color:orange"> Update request submitted for Customer.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer Number 719181 not found." for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer Number 719181 not found.</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer Number 719181 not found.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="67"><span class="badge log pass-bg mr-2">Pass</span>Call Delete customer API for non existent customer number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="68"><span class="badge log pass-bg mr-2">Pass</span>Call Delete customer API for non existent customer number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given submit a delete request to endpoint "/customers" with 719181</span>
+      <div><span style="color:orange"> Delete customer request submitted for Customer.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer does not exist." for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer does not exist.</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer does not exist.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with invalid from and to account numbers</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="75"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with invalid from and to account numbers</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given 981741 and 59105 details</span>
+      <div><span style="color:orange"> Capturing from and to account numbers for Funds Transfer</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Initiate funds transfer for 100.00 with 14603 to endpoint "/accounts/transfer"</span>
+      <div><span style="color:orange"> Transfer request payload is created.</span>
+      </div>
+      <div><b>Request Payload:</b><br><pre>{"fromAccountNumber":981741,"toAccountNumber":59105,"transferAmount":100.0}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the response message "From Account Number 981741 not found."</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with invalid from and to account numbers</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given 59105 and 981741 details</span>
+      <div><span style="color:orange"> Capturing from and to account numbers for Funds Transfer</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Initiate funds transfer for 200.00 with 14603 to endpoint "/accounts/transfer"</span>
+      <div><span style="color:orange"> Transfer request payload is created.</span>
+      </div>
+      <div><b>Request Payload:</b><br><pre>{"fromAccountNumber":59105,"toAccountNumber":981741,"transferAmount":200.0}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the response message "To Account Number 981741 not found."</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with valid account numbers but transfer amount more than account balance</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with valid account numbers but transfer amount more than account balance</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given 98174 and 59105 details</span>
+      <div><span style="color:orange"> Capturing from and to account numbers for Funds Transfer</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Initiate funds transfer for 10000.00 with 14603 to endpoint "/accounts/transfer"</span>
+      <div><span style="color:orange"> Transfer request payload is created.</span>
+      </div>
+      <div><b>Request Payload:</b><br><pre>{"fromAccountNumber":98174,"toAccountNumber":59105,"transferAmount":10000.0}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the response message "Insufficient Funds."</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+  </div>
+<div class="test-content scrollable ps-container ps-theme-default ps-active-y" data-ps-id="9c51aa13-7277-407f-5fb1-ed345748e7b2">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="http://localhost:63342/BankOperationsAPIAutomation/target/ExtentReports/Spark.html?_ijt=6ep3ub5mfbg02ed7r8gal2h25a&amp;_ij_reload=RELOAD_ON_SAVE#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"><div class="test-contents">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Negative scenario testing for Bank API's</h5>
+<span class="badge badge-success">07.22.2026 12:40:42 pm</span>
+<span class="badge badge-danger">07.22.2026 12:40:54 pm</span>
+<span class="badge badge-default">00:00:11:549</span>
+· <span class="uri-anchor badge badge-default">#test-id=1</span>
+<span class="badge badge-default pointer float-right ml-1 et"><i class="fa fa-chevron-down"></i></span>
+<span class="badge badge-default pointer float-right ct"><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with invalid inputs and validate the response code</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "Null" to add customer API</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/customers/add"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "ABC" to add customer API</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":ABC,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/customers/add"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="15"><span class="badge log pass-bg mr-2">Pass</span>Call Add account API with invalid inputs and validate the response code</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Call Add account API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "Null" to add Account API</span>
+      <div><b>Request Payload:</b><br><pre>  "accountNumber":,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 172522328</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>Call Add account API with invalid inputs and validate the response code</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given "ABC" to add Account API</span>
+      <div><b>Request Payload:</b><br><pre>  "accountNumber":ABC,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 172522328</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with existing customer Number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="29"><span class="badge log pass-bg mr-2">Pass</span>Call Add customer API with existing customer Number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing 75931</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":75931,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/customers/add"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer with id: 75931 already exist" for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 75931 already exist"}</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 75931 already exist"}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="36"><span class="badge log pass-bg mr-2">Pass</span>Call Add Account API with existing Account Number and invalid customer Number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="37"><span class="badge log pass-bg mr-2">Pass</span>Call Add Account API with existing Account Number and invalid customer Number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing account 98174</span>
+      <div><b>Request Payload:</b><br><pre> {
+"accountNumber":98174,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 75931</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Account with id: 98174 already exist!" for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Account with id: 98174 already exist!"}</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Account with id: 98174 already exist!"}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="44"><span class="badge log pass-bg mr-2">Pass</span>Call Add Account API with existing Account Number and invalid customer Number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing account 98174</span>
+      <div><b>Request Payload:</b><br><pre> {
+"accountNumber":98174,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When I submit a POST request to endpoint "/accounts/add" with 719181</span>
+      <div><span style="color:orange"> Post request submitted for add account.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer with id: 719181 does not exist!" for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 719181 does not exist!"}</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>{"message":"Customer with id: 719181 does not exist!"}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="51"><span class="badge log pass-bg mr-2">Pass</span>Call get account details with Invalid account number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="52"><span class="badge log pass-bg mr-2">Pass</span>Call get account details with Invalid account number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given existing account 981741</span>
+      <div><b>Request Payload:</b><br><pre> {
+"accountNumber":981741,
+  "bankInformation": {
+    "branchName": "Main Branch",
+    "branchCode": 101,
+    "branchAddress": {
+      "address1": "123 Financial St",
+      "address2": "Suite 100",
+      "city": "Nicosia",
+      "state": "Nicosia",
+      "zip": "1010",
+      "country": "Cyprus"
+    },
+    "routingNumber": 987654321
+  },
+  "accountStatus": "ACTIVE",
+  "accountType": "SAVINGS",
+  "accountBalance": 120,
+  "accountCreated": "2026-07-21T07:35:32.242Z"
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When a get request is submitted to endpoint "/accounts"</span>
+      <div><span style="color:orange">Get account details request submitted</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Account Number 981741 not found.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Account Number 981741 not found." for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Account Number 981741 not found.</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Account Number 981741 not found.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="59"><span class="badge log pass-bg mr-2">Pass</span>Call update customer with non existent customer number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="60"><span class="badge log pass-bg mr-2">Pass</span>Call update customer with non existent customer number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given update request payload is created</span>
+      <div><b>Request Payload:</b><br><pre>{
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "D",
+  "customerNumber":1234,
+  "status": "ACTIVE",
+  "customerAddress": {
+    "address1": "Street 1",
+    "address2": "Apartment 1",
+    "city": "Nicosia",
+    "state": "Nicosia",
+    "zip": "1010",
+    "country": "Cyprus"
+  },
+  "contactDetails": {
+    "emailId": "172522328@mail.com",
+    "homePhone": "22334455",
+    "workPhone": "99887766"
+  }
+}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When submit a put request to endpoint "/customers" with 719181</span>
+      <div><span style="color:orange"> Update request submitted for Customer.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer Number 719181 not found." for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer Number 719181 not found.</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer Number 719181 not found.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="67"><span class="badge log pass-bg mr-2">Pass</span>Call Delete customer API for non existent customer number</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="68"><span class="badge log pass-bg mr-2">Pass</span>Call Delete customer API for non existent customer number</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given submit a delete request to endpoint "/customers" with 719181</span>
+      <div><span style="color:orange"> Delete customer request submitted for Customer.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then validate the response message "Customer does not exist." for negative tests</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer does not exist.</pre>
+      </div>
+      <div><b>Response Payload:</b><br><pre>Customer does not exist.</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="74"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with invalid from and to account numbers</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="75"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with invalid from and to account numbers</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given 981741 and 59105 details</span>
+      <div><span style="color:orange"> Capturing from and to account numbers for Funds Transfer</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Initiate funds transfer for 100.00 with 14603 to endpoint "/accounts/transfer"</span>
+      <div><span style="color:orange"> Transfer request payload is created.</span>
+      </div>
+      <div><b>Request Payload:</b><br><pre>{"fromAccountNumber":981741,"toAccountNumber":59105,"transferAmount":100.0}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the response message "From Account Number 981741 not found."</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="82"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with invalid from and to account numbers</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given 59105 and 981741 details</span>
+      <div><span style="color:orange"> Capturing from and to account numbers for Funds Transfer</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Initiate funds transfer for 200.00 with 14603 to endpoint "/accounts/transfer"</span>
+      <div><span style="color:orange"> Transfer request payload is created.</span>
+      </div>
+      <div><b>Request Payload:</b><br><pre>{"fromAccountNumber":59105,"toAccountNumber":981741,"transferAmount":200.0}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response status code should be 404</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the response message "To Account Number 981741 not found."</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="89"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with valid account numbers but transfer amount more than account balance</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>Call Transfer Funds API with valid account numbers but transfer amount more than account balance</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given 98174 and 59105 details</span>
+      <div><span style="color:orange"> Capturing from and to account numbers for Funds Transfer</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And Initiate funds transfer for 10000.00 with 14603 to endpoint "/accounts/transfer"</span>
+      <div><span style="color:orange"> Transfer request payload is created.</span>
+      </div>
+      <div><b>Request Payload:</b><br><pre>{"fromAccountNumber":98174,"toAccountNumber":59105,"transferAmount":10000.0}</pre>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the response status code should be 400</span>
+      <div><span style="color:orange"> Validation of Response status code.</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And validate the response message "Insufficient Funds."</span>
+      <div><span style="color:orange">Validation of Response message</span>
+      </div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div></div></div>
+<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 0px; height: 666px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 589px;"></div></div></div></div>
+<div class="container-fluid p-4 view dashboard-view d-none">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jul 22, 2026 12:40:42 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jul 22, 2026 12:40:54 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class=""><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+<canvas id="parent-analysis" width="507" height="112" style="display: block; height: 90px; width: 406px;" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip="100%">
+<b>1</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip="0%"><b>0</b> features failed,
+<b>0</b> skipped, <b data-tooltip="0%">0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class=""><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+<canvas id="child-analysis" width="507" height="112" style="display: block; height: 90px; width: 406px;" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip="100%"><b>13</b> scenarios passed</small></div>
+<div>
+<small data-tooltip="0%"><b>0</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip="%">0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class=""><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+<canvas id="grandchild-analysis" width="507" height="112" style="display: block; height: 90px; width: 406px;" class="chartjs-render-monitor"></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip="100%"><b>47</b> steps passed</small></div>
+<div>
+<small data-tooltip="0%"><b>0</b> steps failed,
+<b>0</b> skipped, <b data-tooltip="%">0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
+<canvas id="timeline" height="150" width="1701" style="display: block; height: 120px; width: 1361px;" class="chartjs-render-monitor"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Negative scenario testing for Bank API's":11.549
+};
+</script>
+<div class="row">
+</div>
+</div>
+<script class="d-none">
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 13,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 47,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="./Banking API Test Execution Report_NegativeTests_files/spark-script.js.download"></script>
+<script type="text/javascript"></script>
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>
